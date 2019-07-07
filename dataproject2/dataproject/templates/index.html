@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flask Plotlyjs Example</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+
+ 
+    <div class="container">
+        <div class="page-header">
+            <div class="jumbotron">
+            <h1>Tornados, Are they increasing?  What's their impact?</h1>
+            <p>Explore the charts and interactive maps</p>
+
+            <em>~"Tornadoes doing what they do best, Tornado-Ing" - Sumaya</em>
+          </div>
+        
+        </div>
+    </div>
+
+    <div>
+       <hr> <a href="{{url_for('mapsRoute') }}">"Click me"</a>
+      
+    </div>
+
+
+     <!--
+      <div class="panel panel-primary">
+            <a href="maps.html"><div class="panel panel-primary">
+
+                    <div class="panel-heading">
+                    <h3 class="panel-title">Interactive Maps</h3>
+</div>
+</div>
+</div>
+-->
+
+
+
+
+
+
+
+  <div id="bar-plot"></div>
+  <div id="trend-plot"></div>
+  <div id="pie-plot"></div>
+
+  <!-- <script src="https://cdn.plot.ly/plotly-1.31.2.min.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="{{ url_for('static', filename='js/bonus.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/trendplot.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/plots.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/pieplot.js') }}"></script>
+
+</body>
+
+</html>
